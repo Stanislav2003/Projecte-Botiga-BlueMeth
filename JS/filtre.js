@@ -23,7 +23,7 @@ $(document).ready(function(){
         else if (catProduct == "pantalon") opcion = 12
 
         // Comprovar check
-        if (cont == 0){
+        if (cont == 0){   ENXOUFAR
             ultim[0] = catProduct;
             btn[opcion].checked = true;
         }
