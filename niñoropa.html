@@ -4,7 +4,7 @@
 		  <title> Projecte Final </title>
 		  <meta charset="utf-8">
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
-		  <link rel="stylesheet" type="text/css" href="CSS/ropahombre.css">
+		  <link rel="stylesheet" type="text/css" href="CSS/cesta.css">
       <link rel="stylesheet" type="text/css" href="CSS/principal.css">
       <link rel="shortcut icon" href="blue.png">
       <script src="JS/jquery-3.2.1.js"></script>
@@ -38,37 +38,48 @@
           <ul class="nav">
             <li><a href="oferta.html" id="rebajas">REBAJAS</a></li>
             <li><a href="cataleg.html">Inicio</a></li>
+            <li ><a href="ropahombre.html">Ropa</a>
+              <ul>
+                <li><a href="ropahombre.html">Hombre</a></li>
+                <li><a href="ropamujer.html">Mujer</a></li>
+                <li><a href="niñoropa.html">Niño</a></li>
+              </ul>
+            </li>
+    
             <li><a href="hombre.html">Hombre</a></li>
             <li><a href="mujer.html">Mujer</a></li>
             <li><a href="niño.html">Niño</a></li>
             <li><a href="calzado.html">Calzado</a></li>
             <li><a href="accesorios.html">Accesorios</a></li>
-            <li style="margin-left: 270px;"><a href="iniciSessio.html"><svg class="responsiveAccountHeader_accountIcon" width="24px" height="24px" viewBox="0 0 24 24"><path d="M12,10.5 C13.6568542,10.5 15,9.15685425 15,7.5 C15,5.84314575 13.6568542,4.5 12,4.5 C10.3431458,4.5 9,5.84314575 9,7.5 C9,9.15685425 10.3431458,10.5 12,10.5 Z M12,12.5 C9.23857625,12.5 7,10.2614237 7,7.5 C7,4.73857625 9.23857625,2.5 12,2.5 C14.7614237,2.5 17,4.73857625 17,7.5 C17,10.2614237 14.7614237,12.5 12,12.5 Z M5,21.5 L3,21.5 C3,17.6340068 7.02943725,14.5 12,14.5 C16.9705627,14.5 21,17.6340068 21,21.5 L19,21.5 C19,18.8641562 15.9603707,16.5 12,16.5 C8.03962935,16.5 5,18.8641562 5,21.5 Z"/></svg></a></li>
+            <li style="margin-left: 210px;"><a href="iniciSessio.html"><svg class="responsiveAccountHeader_accountIcon" width="24px" height="24px" viewBox="0 0 24 24"><path d="M12,10.5 C13.6568542,10.5 15,9.15685425 15,7.5 C15,5.84314575 13.6568542,4.5 12,4.5 C10.3431458,4.5 9,5.84314575 9,7.5 C9,9.15685425 10.3431458,10.5 12,10.5 Z M12,12.5 C9.23857625,12.5 7,10.2614237 7,7.5 C7,4.73857625 9.23857625,2.5 12,2.5 C14.7614237,2.5 17,4.73857625 17,7.5 C17,10.2614237 14.7614237,12.5 12,12.5 Z M5,21.5 L3,21.5 C3,17.6340068 7.02943725,14.5 12,14.5 C16.9705627,14.5 21,17.6340068 21,21.5 L19,21.5 C19,18.8641562 15.9603707,16.5 12,16.5 C8.03962935,16.5 5,18.8641562 5,21.5 Z"/></svg></a></li>
             <li><a href="cesta.html"><svg width="24px" height="24px" viewBox="0 0 24 24"><path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path><path d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z"></path></svg></li></a>
+            <li id="itemsTotal"></li>
           </ul>
         </div>
+      </div>
 
         <div class="principal2">
           <p class="barra" id="barra">OFERTAS BLACK FRIDAY</p>
           <p class="barra" id="barra1" >ULTIMAS NOVEDADES A MEJOR PRECIO</p>
           <p class="barra" id="barra2" >ENVIOS EN 24H GRATIS DURANTE ESTA SEMANA</p>  
         </div>
-        
-        <div class="inicio">
-          <button onclick="tornarAdalt()">Volver al inicio</button>
 
-        <script>
-          function tornarAdalt() {
-            var body = $("html, body");
-            body.stop().animate({
-              scrollTop:0
-            }, 500, 'swing', function() { 
-              document.documentElement.scrollTop = 0;
-            })
-          }
-          </script>
+        <div class="fixBoto">
+          <div class="inicio">
+            <button onclick="tornarAdalt()">Volver al inicio</button>
+
+          <script>
+            function tornarAdalt() {
+              var body = $("html, body");
+              body.stop().animate({
+                scrollTop:0
+              }, 500, 'swing', function() { 
+                document.documentElement.scrollTop = 0;
+              })
+            }
+            </script>
+          </div>
         </div>
-      </div>
 
       <div class="links">
         <a href="cataleg.html"><p>Página principal <span>&#10095;</span></p></a>
@@ -77,6 +88,7 @@
         <hr>
       </div>
 
+      <h3 id="hombre">Niño - Ropa (150)</h3>
         <div class = "categoriaLista">
           <b><br><br><p>Marca</p></b><br><br>
           <input type="checkbox" class="category_item botoFiltre" category="adidas"><p class="titols">Adidas</p>
@@ -106,9 +118,9 @@
             <button class="category_item botoFiltre" category="sudadera">CHAQUETAS NIKE</button>
             <button class="category_item botoFiltre" category="xlarge">TOP VENTAS ADIDAS</button>
             <button class="category_item botoFiltre" category="small">TODO SOBRE NIKE</button><br>
-            <button class="category_item botoFiltre" category="camiseta">LAS CAMISETAS MÁS COOL</button>
+            <button class="category_item botoFiltre" category="xsmall">LAS CAMISETAS MÁS COOL</button>
             <button class="category_item botoFiltre" category="conjunto">CONJUNTOS MCKENZIE</button>
-            <button class="category_item botoFiltre" category="pantalon">TUS PANTALONES FAVORITOS AQUÍ</button><br>
+            <button class="category_item botoFiltre" category="xlarge">TUS PANTALONES FAVORITOS AQUÍ</button><br>
             <button class="category_item botoFiltre" category="chaqueta">COLECCIÓN HOMBRE</button>
             <button class="category_item botoFiltre" category="large">LAS MEJORES CHAQUETAS</button>
             <button class="category_item botoFiltre" category="xsmall">TOP VENTAS HOMBRE</button>
@@ -116,180 +128,213 @@
         </div>
 
         <section class="products-list">
-          <div class="productItem" category="adidas">
-            <img src="images/niño/ropa/marcas/adidas1.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas1.jpg';">
-            <a href="#">adidas camiseta 3-Stripes Sport júnior</a>
-            <p>35,00€</p>
+          <div class="productItem item" category="adidas">
+            <img class="item-image" src="images/niño/ropa/marcas/adidas1.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas1.jpg';">
+            <a href="#" class="item-title">adidas camiseta 3-Stripes Sport</a>
+            <p class="item-price">35.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="adidas">
-            <img src="images/niño/ropa/marcas/adidas2.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas2.jpg';">
-            <a href="#">adidas chándal Mixed Fabric júnior</a>
-            <p>70,00€</p>
+          <div class="productItem item" category="adidas">
+            <img class="item-image" src="images/niño/ropa/marcas/adidas2.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas2.jpg';">
+            <a href="#" class="item-title">adidas chándal Mixed Fabric júnior</a>
+            <p class="item-price">70.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="adidas">
-            <img src="images/niño/ropa/marcas/adidas3.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas3.jpg';">
-            <a href="#">adidas chándal Match 1/4 Zip para bebé</a>
-            <p>75,00€</p>
-          </div>
-
-          <div class="productItem" category="nike">
-            <img src="images/niño/ropa/marcas/nike1.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike1.jpg';">
-            <a href="#">Nike sudadera con capucha Tape júnior</a>
-            <p>65,00€</p>
-          </div>
-          <div class="productItem" category="nike">
-            <img src="images/niño/ropa/marcas/nike2.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike2.jpg';">
-            <a href="#">Nike chándal Academy 21 júnior</a>
-            <p>40,00€</p>
-          </div>
-          <div class="productItem" category="nike">
-            <img src="images/niño/ropa/marcas/nike3.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike3.jpg';">
-            <a href="#">Nike camiseta Hybrid júnior</a>
-            <p>85,00€</p>
+          <div class="productItem item" category="adidas">
+            <img class="item-image" src="images/niño/ropa/marcas/adidas3.jpg" onmouseover="this.src='images/niño/ropa/marcas/adidas3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/adidas3.jpg';">
+            <a href="#" class="item-title">adidas chándal Match 1/4 Zip para bebé</a>
+            <p class="item-price">75.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
 
-          <div class="productItem" category="puma">
-            <img src="images/niño/ropa/marcas/puma1.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma1.jpg';">
-            <a href="#">Puma Essential Overhead Tracksuit Infant</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="nike">
+            <img class="item-image" src="images/niño/ropa/marcas/nike1.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike1.jpg';">
+            <a href="#" class="item-title">Nike sudadera con capucha Tape júnior</a>
+            <p class="item-price">65.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="puma">
-            <img src="images/niño/ropa/marcas/puma2.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma2.jpg';">
-            <a href="#">Puma Girls' Essential Crop T-Shirt Junior</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="nike">
+            <img class="item-image" src="images/niño/ropa/marcas/nike2.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike2.jpg';">
+            <a href="#" class="item-title">Nike chándal Academy 21 júnior</a>
+            <p class="item-price">40.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="puma">
-            <img src="images/niño/ropa/marcas/puma3.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma3.jpg';">
-            <a href="#">Puma camiseta técnica Fitness Runtrain júnior</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="nike">
+            <img class="item-image" src="images/niño/ropa/marcas/nike3.jpg" onmouseover="this.src='images/niño/ropa/marcas/nike3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/nike3.jpg';">
+            <a href="#" class="item-title">Nike camiseta Hybrid júnior</a>
+            <p class="item-price">85.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+
+          <div class="productItem item" category="puma">
+            <img class="item-image" src="images/niño/ropa/marcas/puma1.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma1.1.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma1.jpg';">
+            <a href="#" class="item-title">Puma Essential Overhead Tracksuit</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="puma">
+            <img class="item-image" src="images/niño/ropa/marcas/puma2.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma2.2.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma2.jpg';">
+            <a href="#" class="item-title">Puma Girls' Essential Crop T-Shirt</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="puma">
+            <img class="item-image" src="images/niño/ropa/marcas/puma3.jpg" onmouseover="this.src='images/niño/ropa/marcas/puma3.3.jpg';" onmouseout="this.src='images/niño/ropa/marcas/puma3.jpg';">
+            <a href="#" class="item-title">Puma camiseta técnica Fitness</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
           
-          <div class="productItem" category="xsmall">
-            <img src="images/niño/ropa/tallas/xs1.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs1.jpg';">
-            <a href="#">Align Blend Shorts Junior</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="xsmall">
+            <img class="item-image" src="images/niño/ropa/tallas/xs1.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs1.jpg';">
+            <a href="#" class="item-title">Align Blend Shorts Junior</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="xsmall">
-            <img src="images/niño/ropa/tallas/xs2.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs2.jpg';">
-            <a href="#">Sonneti Girls' Paint Splash Leggings Junior</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="xsmall">
+            <img class="item-image" src="images/niño/ropa/tallas/xs2.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs2.jpg';">
+            <a href="#" class="item-title">Sonneti Girls' Paint Splash</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="xsmall">
-            <img src="images/niño/ropa/tallas/xs3.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs3.jpg';">
-            <a href="#">McKenzie Girls' Colour Block Long Sleeve T-Shirt Junior</a>
-            <p>120,00€</p>
-          </div>
-
-          <div class="productItem" category="small">
-            <img src="images/niño/ropa/tallas/s1.jpg" onmouseover="this.src='images/niño/ropa/tallas/s1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s1.jpg';">
-            <a href="#">SikSilk x Messi Lion Joggers Junior</a>
-            <p>50,00€</p>
-          </div>
-          <div class="productItem" category="small">
-            <img src="images/niño/ropa/tallas/s2.jpg" onmouseover="this.src='images/niño/ropa/tallas/s2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s2.jpg';">
-            <a href="#">JUICY COUTURE Girls' Overhead Flared Tracksuit Junior</a>
-            <p>25,00€</p>
-          </div>
-          <div class="productItem" category="small">
-            <img src="images/niño/ropa/tallas/s3.jpg" onmouseover="this.src='images/niño/ropa/tallas/s3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s3.jpg';">
-            <a href="#">JUICY COUTURE Girls' Full Zip Hooded Flare Tracksuit Junior</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="xsmall">
+            <img class="item-image" src="images/niño/ropa/tallas/xs3.jpg" onmouseover="this.src='images/niño/ropa/tallas/xs3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xs3.jpg';">
+            <a href="#" class="item-title">McKenzie Girls' Colour Block Long Sleeve T-Shirt Junior</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
 
-          <div class="productItem" category="mid">
-            <img src="images/niño/ropa/tallas/m1.jpg" onmouseover="this.src='images/niño/ropa/tallas/m1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m1.jpg';">
-            <a href="#">JUICY COUTURE Girls' Full Zip Hooded Flare Tracksuit Junior</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="small">
+            <img class="item-image" src="images/niño/ropa/tallas/s1.jpg" onmouseover="this.src='images/niño/ropa/tallas/s1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s1.jpg';">
+            <a href="#" class="item-title">SikSilk x Messi Lion Joggers Junior</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="mid">
-            <img src="images/niño/ropa/tallas/m2.jpg" onmouseover="this.src='images/niño/ropa/tallas/m2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m2.jpg';">
-            <a href="#">Tommy Hilfiger Flag Rib T-Shirt Junior</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="small">
+            <img class="item-image" src="images/niño/ropa/tallas/s2.jpg" onmouseover="this.src='images/niño/ropa/tallas/s2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s2.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Overhead Flared Tracksuit Junior</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="mid">
-            <img src="images/niño/ropa/tallas/m3.jpg" onmouseover="this.src='images/niño/ropa/tallas/m3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m3.jpg';">
-            <a href="#">Sonneti Girls' Aria All Over Print Padded Jacket Infant</a>
-            <p>120,00€</p>
-          </div>
-
-          <div class="productItem" category="large">
-            <img src="images/niño/ropa/tallas/l1.jpg" onmouseover="this.src='images/niño/ropa/tallas/l1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l1.jpg';">
-            <a href="#">Tommy Hilfiger Essential Hoodie Junior</a>
-            <p>50,00€</p>
-          </div>
-          <div class="productItem" category="large">
-            <img src="images/niño/ropa/tallas/l2.jpg" onmouseover="this.src='images/niño/ropa/tallas/l2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l2.jpg';">
-            <a href="#">JUICY COUTURE Girls' Velour Full Zip Hooded Tracksuit Children</a>
-            <p>25,00€</p>
-          </div>
-          <div class="productItem" category="large">
-            <img src="images/niño/ropa/tallas/l3.jpg" onmouseover="this.src='images/niño/ropa/tallas/l3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l3.jpg';">
-            <a href="#">Tommy Hilfiger Flag Rib Joggers Junior</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="small">
+            <img class="item-image" src="images/niño/ropa/tallas/s3.jpg" onmouseover="this.src='images/niño/ropa/tallas/s3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/s3.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Full Zip Hooded Flare Tracksuit Junior</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
 
-          <div class="productItem" category="xlarge">
-            <img src="images/niño/ropa/tallas/xl1.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl1.jpg';">
-            <a href="#">JUICY COUTURE Girls' Velour Overhead Tracksuit Infant</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="mid">
+            <img class="item-image" src="images/niño/ropa/tallas/m1.jpg" onmouseover="this.src='images/niño/ropa/tallas/m1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m1.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Full Zip Hooded Flare Tracksuit Junior</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="xlarge">
-            <img src="images/niño/ropa/tallas/xl2.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl2.jpg';">
-            <a href="#">Tommy Hilfiger Girls' Essential Down Jacket Junior</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="mid">
+            <img class="item-image" src="images/niño/ropa/tallas/m2.jpg" onmouseover="this.src='images/niño/ropa/tallas/m2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m2.jpg';">
+            <a href="#" class="item-title">Tommy Hilfiger Flag Rib T-Shirt Junior</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="xlarge">
-            <img src="images/niño/ropa/tallas/xl3.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl3.jpg';">
-            <a href="#">McKenzie Girls' Tape Boyfriend T-Shirt Junior</a>
-            <p>120,00€</p>
-          </div>
-
-          <div class="productItem" category="conjunto">
-            <img src="images/niño/ropa/tipus/conj1.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/conj1.jpg';">
-            <a href="#">McKenzie Micro Essential Crew Tracksuit Infant</a>
-            <p>50,00€</p>
-          </div>
-          <div class="productItem" category="conjunto">
-            <img src="images/niño/ropa/tipus/conj2.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/conj2.jpg';">
-            <a href="#">Sonneti conjunto camiseta/leggings Micro Velvet para bebé</a>
-            <p>25,00€</p>
-          </div>
-          <div class="productItem" category="conjunto">
-            <img src="images/niño/ropa/tipus/conj3.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj3.3.webp';" onmouseout="this.src='images/niño/ropa/tipus/conj3.jpg';">
-            <a href="#">BOSS body Colour Block Polo Onesie para bebé</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="mid">
+            <img class="item-image" src="images/niño/ropa/tallas/m3.jpg" onmouseover="this.src='images/niño/ropa/tallas/m3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/m3.jpg';">
+            <a href="#" class="item-title">Sonneti Girls' Aria All Over Print Padded Jacket Infant</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
 
-          <div class="productItem" category="sudadera">
-            <img src="images/niño/ropa/tipus/suda1.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda1.jpg';">
-            <a href="#">JUICY COUTURE Girls' Velour Full Zip Hooded Tracksuit Children</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="large">
+            <img class="item-image" src="images/niño/ropa/tallas/l1.jpg" onmouseover="this.src='images/niño/ropa/tallas/l1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l1.jpg';">
+            <a href="#" class="item-title">Tommy Hilfiger Essential Hoodie Junior</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="sudadera">
-            <img src="images/niño/ropa/tipus/suda2.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda2.jpg';">
-            <a href="#">Jordan conjunto sudadera/leggings All Over infantil</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="large">
+            <img class="item-image" src="images/niño/ropa/tallas/l2.jpg" onmouseover="this.src='images/niño/ropa/tallas/l2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l2.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Velour Full Zip Hooded Tracksuit Children</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="sudadera">
-            <img src="images/niño/ropa/tipus/suda3.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda3.3.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda3.jpg';">
-            <a href="#">BOSS polo infantil</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="large">
+            <img class="item-image" src="images/niño/ropa/tallas/l3.jpg" onmouseover="this.src='images/niño/ropa/tallas/l3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/l3.jpg';">
+            <a href="#" class="item-title">Tommy Hilfiger Flag Rib Joggers Junior</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
 
-          <div class="productItem" category="chaqueta">
-            <img src="images/niño/ropa/tipus/cha1.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha1.jpg';">
-            <a href="#">Jordan Essential Woven Jacket</a>
-            <p>50,00€</p>
+          <div class="productItem item" category="xlarge">
+            <img class="item-image" src="images/niño/ropa/tallas/xl1.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl1.1.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl1.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Velour Overhead Tracksuit Infant</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="chaqueta">
-            <img src="images/niño/ropa/tipus/cha2.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha2.jpg';">
-            <a href="#">Nike Air Max Lightweight chaqueta</a>
-            <p>25,00€</p>
+          <div class="productItem item" category="xlarge">
+            <img class="item-image" src="images/niño/ropa/tallas/xl2.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl2.2.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl2.jpg';">
+            <a href="#" class="item-title">Tommy Hilfiger Girls' Essential Down Jacket Junior</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
-          <div class="productItem" category="chaqueta">
-            <img src="images/niño/ropa/tipus/cha3.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha3.3.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha3.jpg';">
-            <a href="#">Nike chaqueta Hoxton Woven</a>
-            <p>120,00€</p>
+          <div class="productItem item" category="xlarge">
+            <img class="item-image" src="images/niño/ropa/tallas/xl3.jpg" onmouseover="this.src='images/niño/ropa/tallas/xl3.3.jpg';" onmouseout="this.src='images/niño/ropa/tallas/xl3.jpg';">
+            <a href="#" class="item-title">McKenzie Girls' Tape Boyfriend T-Shirt Junior</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+
+          <div class="productItem item" category="conjunto">
+            <img class="item-image" src="images/niño/ropa/tipus/conj1.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/conj1.jpg';">
+            <a href="#" class="item-title">McKenzie Micro Essential Crew Tracksuit Infant</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="conjunto">
+            <img class="item-image" src="images/niño/ropa/tipus/conj2.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/conj2.jpg';">
+            <a href="#" class="item-title">Sonneti conjunto camiseta/leggings Micro Velvet para bebé</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="conjunto">
+            <img class="item-image" src="images/niño/ropa/tipus/conj3.jpg" onmouseover="this.src='images/niño/ropa/tipus/conj3.3.webp';" onmouseout="this.src='images/niño/ropa/tipus/conj3.jpg';">
+            <a href="#" class="item-title">BOSS body Colour Block Polo Onesie para bebé</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+
+          <div class="productItem item" category="sudadera">
+            <img class="item-image" src="images/niño/ropa/tipus/suda1.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda1.jpg';">
+            <a href="#" class="item-title">JUICY COUTURE Girls' Velour Full Zip Hooded Tracksuit Children</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="sudadera">
+            <img class="item-image" src="images/niño/ropa/tipus/suda2.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda2.jpg';">
+            <a href="#" class="item-title">Jordan conjunto sudadera/leggings All Over infantil</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="sudadera">
+            <img class="item-image" src="images/niño/ropa/tipus/suda3.jpg" onmouseover="this.src='images/niño/ropa/tipus/suda3.3.jpg';" onmouseout="this.src='images/niño/ropa/tipus/suda3.jpg';">
+            <a href="#" class="item-title">BOSS polo infantil</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+
+          <div class="productItem item" category="chaqueta">
+            <img class="item-image" src="images/niño/ropa/tipus/cha1.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha1.1.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha1.jpg';">
+            <a href="#" class="item-title">Jordan Essential Woven Jacket</a>
+            <p class="item-price">50.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="chaqueta">
+            <img class="item-image" src="images/niño/ropa/tipus/cha2.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha2.2.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha2.jpg';">
+            <a href="#" class="item-title">Nike Air Max Lightweight chaqueta</a>
+            <p class="item-price">25.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
+          </div>
+          <div class="productItem item" category="chaqueta">
+            <img class="item-image" src="images/niño/ropa/tipus/cha3.jpg" onmouseover="this.src='images/niño/ropa/tipus/cha3.3.jpg';" onmouseout="this.src='images/niño/ropa/tipus/cha3.jpg';">
+            <a href="#" class="item-title">Nike chaqueta Hoxton Woven</a>
+            <p class="item-price">120.00€</p>
+            <button class="addToCart">Añadir al carrito</button>
           </div>
         </section>
 
@@ -335,9 +380,9 @@
           <div class="colcol">
             <div class="col">
               <h4>TARJETAS REGALO</h4>
-              <img src="images/principal/cartaRegalo.png">
+              <img class="item-image" src="images/principal/cartaRegalo.png">
               <p class="preu">5€ - 300€</p>
-              <p class="tarjeta">La tarjeta regalo física de BM es el regalo que estabas buscando. Canjeable en todas las tiendas BlueMeth España.</p>
+              <p class="item-price" class="tarjeta">La tarjeta regalo física de BM es el regalo que estabas buscando. Canjeable en todas las tiendas BlueMeth España.</p>
               <a href="" id="botoTargeta">COMPRAR TARJETAS REGALO</a>
             </div>
   
@@ -364,5 +409,11 @@
           <p id="pago">Aceptamos las siguientes formas de pago</p>
           <img id="visa" src="pago.png">
         </div>
+        <script src="JS/carrito/cestaNiño.js"></script>
+      <script>
+        items = JSON.parse(localStorage.getItem('items'));
+        let itemsTotal = document.getElementById("itemsTotal")
+        itemsTotal.innerHTML=items
+      </script>
       </body>
     </html>

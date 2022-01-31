@@ -33,6 +33,7 @@ body {
 }
 
 .head a:hover {
+  font-size: 13px;
   text-decoration: underline;
 }
 
@@ -52,22 +53,36 @@ body {
   margin: 10px 20px 0 30px;
 }
 
+#itemsTotal {
+  position: relative;
+  top: 15px;
+  right: 31px;
+  font-size: 13.5px;
+  font-weight: normal;
+  color: aqua;
+}
+
 .fix{
   position: sticky;
   top: -1px;
   z-index: 500;
 }
 
+.fixBoto{
+  position: sticky;
+  top:100px;
+  z-index: 500; 
+}
+
 #hol{
-  width: 300px;
+  width: 250px;
   height: 40px;
   float:right;
-  background-image: url('../aa.png');
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position: right;
+ 
   display: block;
   border: 0;
+  outline: none;
+  text-indent: 10px;
 } 
 
 #boto{
@@ -75,12 +90,17 @@ body {
   float:right;
   background-color: #43d5b0;
   color: #fff;
-  transition: color .3s,background-color .3s,border-color .3s,opacity .3s;
+  transition: all 0.5s;
   height: 40px;
   margin-right: 80px;
   display: block;
   cursor: pointer;
-  border: 0
+  border: 0;
+  font-weight: normal;
+}
+
+#boto:hover {
+  background-color: #0B67CE;
 }
 
 .principal {
@@ -107,10 +127,18 @@ ul, ol {
   padding:10px 15px;
   display:block;
   transition:0.6s ease;
+  font-weight: normal;
 }
 
 svg {
   color: white;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+svg:hover{
+  height: 20px;
+  width: 20px;
 }
 
 .nav li a:hover {
@@ -196,6 +224,7 @@ svg {
   text-align: left;
   color: white;
   margin-bottom: 40px;
+
 }
 
 .ampladaMaxima {
@@ -210,6 +239,7 @@ svg {
 }
 
 .social h3 {
+  font-weight: normal;
   font-size: 15px;
 }
 
@@ -272,6 +302,10 @@ svg {
   padding: 30px;
 }
 
+.col p{
+  font-weight: normal;
+}
+
 .tarjeta {
   padding-top: 10px; 
   padding-bottom: 70px;
@@ -298,6 +332,7 @@ svg {
   text-decoration: none;
   color: white;
   font-size: 14px;
+  font-weight: normal;
 }
 
 .footer2 a:hover {
@@ -317,7 +352,7 @@ svg {
   position: relative;
   top: 120px;
   right: 260px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 #contact{
@@ -330,6 +365,17 @@ svg {
   position: relative;
   top: 10px;
   left: 170px;
+  font-weight: normal;
+  text-decoration: underline;
+  color: white;
+}
+
+.info a:active {
+  color: blue;
+}
+
+.info p {
+  font-weight: normal;
 }
 
 #pago{

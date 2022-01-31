@@ -6,6 +6,8 @@ $(document).on('submit', '#contenido', function() {
 
 //Obrir els forms
 
+let papapa = document.getElementById("input")
+
 var primerForm = document.getElementById('contenido');
 var segonForm = document.getElementById('contenido1');
 var tercerForm = document.getElementById('contenido2');
@@ -20,21 +22,128 @@ let allInputs = validarInputs.querySelectorAll("input")
 
 let btnEnviar = document.getElementById("enviar")
 
-btnEnviar.addEventListener('click', obrirSegonForm)
+btnEnviar.addEventListener('click', validarDades)
+
+function validarDades(){
+  let inputsLetras = document.getElementsByClassName("soloLetras")
+  let letrasValidas = /^[A-Z]+$/i
+  let numerosValidos = /[0-9]/
+  let zero = false
+  let un = false
+  let tres = false
+  let quatre = false
+  let correcte = false
+  let correcte1 = false
+  let correcte2 = false
+  let correcte3 = false
+  let correcte4 = false
+  let correcte5 = false
+  let correcte6 = false
+  let correcte7 = false
+
+  if(!letrasValidas.test(inputsLetras[0].value)) nomDades.innerHTML =  "El formato es incorrecto"
+  else{
+    nomDades.innerHTML = ""
+    correcte = true
+  } 
+
+  if(!letrasValidas.test(inputsLetras[1].value)) apellidoDades.innerHTML =  "El formato es incorrecto"
+  else{
+    apellidoDades.innerHTML = ""
+    correcte1 = true
+  } 
+
+  if(inputsLetras[2].value == "") direccionDades.innerHTML =  "El formato es incorrecto"
+  else{
+    direccionDades.innerHTML = ""
+    correcte2 = true
+  } 
+
+  if(!letrasValidas.test(inputsLetras[3].value)) provinciaDades.innerHTML =  "El formato es incorrecto"
+  else{
+    provinciaDades.innerHTML = ""
+    correcte3 = true
+  } 
+
+  if(!letrasValidas.test(inputsLetras[4].value)) ciutatDades.innerHTML =  "El formato es incorrecto"
+  else{
+    ciutatDades.innerHTML = ""
+    correcte4 = true
+  } 
+
+  if(!numerosValidos.test(inputsLetras[5].value)) codiDades.innerHTML = "El formato es incorrecto"
+  else {
+    codiDades.innerHTML = ""
+    correcte5 = true
+  }
+  
+  if(!inputsLetras[6].value.includes("@")) emailDades.innerHTML = "El formato es incorrecto"
+  else {
+    emailDades.innerHTML = ""
+    correcte6 = true
+  }
+
+  if(!numerosValidos.test(inputsLetras[7].value)) numeroDades.innerHTML = "El formato es incorrecto"
+  else {
+    numeroDades.innerHTML = ""
+    correcte7 = true
+  }
+
+  if(correcte == true && correcte1 == true && correcte2 == true && correcte3 == true && correcte4 == true && correcte5 == true && correcte6 == true && correcte7 == true) obrirSegonForm()
+}
 
 function obrirSegonForm(){
-  let cont = 0;
-  for (let i = 0; i < allInputs.length; i++) {
-      if(allInputs[i].value != ""){
-          cont++
-      }
+  primerForm.style.display = "none"
+  segonForm.style.display = "block"
+  botoEditar.style.display = "inline-block"
+  tick.style.display = "inline-block"
+}
+
+let diaMes = document.querySelector(".diaMes")
+let codiTarjeta = document.querySelector(".codiTarjeta")
+let revisar = document.getElementById("confirm-pago")
+let errorDia = document.getElementById("validarDia")
+let numeroTarjeta = document.getElementById("numTarjeta")
+
+numeroTarjeta.onkeydown = function hol(e){
+  for (let i = 4; i < 20; i+=5) {
+    if(numeroTarjeta.value.length == i) {
+      numeroTarjeta.value = numeroTarjeta.value + " "
+    }
   }
-  if (cont == 9){
-      primerForm.style.display = "none"
-      segonForm.style.display = "block"
-      botoEditar.style.display = "inline-block"
-      tick.style.display = "inline-block"
+}
+
+revisar.addEventListener('click', validarTarjeta)
+
+function validarTarjeta(){
+  let valorDiaMes = diaMes.value
+  let valorCodiTarjeta = codiTarjeta.value
+  let valorNumeroTarjeta = numeroTarjeta.value
+  var numerosAceptados = /[0-9]/
+  var correcte = false
+  var correcte1 = false
+  var correcte2 = false
+
+  if (valorDiaMes.length != 5 || !valorDiaMes[2].includes("/")) errorDia.innerHTML = "El formato es incorrecto"
+  else {
+    correcte = true
+    errorDia.innerHTML = ""
   }
+
+  if (!valorCodiTarjeta.match(numerosAceptados) || valorCodiTarjeta.length != 3) validarCodiTarjeta.innerHTML = "El formato es incorrecto"
+  else {
+    correcte1 = true
+    validarCodiTarjeta.innerHTML = ""
+  }
+  
+
+  if (valorNumeroTarjeta.length != 19 || !valorNumeroTarjeta.match(numerosAceptados)) validarNumTarjeta.innerHTML = "El formato es incorrecto"
+  else {
+    validarNumTarjeta.innerHTML = ""
+    correcte2 = true
+  } 
+  
+  if (correcte == true && correcte1 == true && correcte2 == true) obrirTercerForm()
 }
 
 let tick1 = document.getElementById("tick1")
@@ -85,8 +194,8 @@ function obrirDescompte(){
 
   //Verificar codis descompte
 
-let botoAplicar = document.getElementById("anarPaypal")
-let botoAplicar1 = document.getElementById("anarPaypal1")
+let botoAplicar = document.getElementById("aplicar")
+let botoAplicar1 = document.getElementById("aplicar1")
 let inputCodi = document.getElementById("inputCodi")
 let textError = document.getElementById("error")
 
@@ -95,16 +204,22 @@ botoAplicar.addEventListener('click', error)
 function error(){
   Number(inputCodi.value)
   if(inputCodi.value  == 9842) {
+      botoAplicar.className = "hol"
       textError.innerHTML = "Has aplicado correctamente el código de descuento<br>Se te aplicará un <b>10%</b> de descuento a tu compra"
       textError.style.color = "green"
+      
       dividirPreu()
   }
-  else textError.innerHTML = "El codigo introducido no es válido"
+  else {
+    botoAplicar.className = "hol"
+    textError.innerHTML = "El codigo introducido no es válido"
+  }
 }
 
 botoAplicar1.addEventListener('click', error1)
 
 function error1(){
+  botoAplicar1.className = "hol"
   let textError1 = document.getElementById("error1")
   textError1.innerHTML = "El codigo introducido no es válido"
 }
@@ -142,6 +257,19 @@ function obrirTarjetaCredito(){
   botoAnarPaypal.checked = false
   botoTarjetaRegalo.checked = false
 }
+
+let botoRegistrar = document.getElementById("registrarDatosTarjeta")
+let textRegistrar = document.getElementById("guardarDatos")
+let textRegistrat = document.getElementById("registrarTarjeta")
+
+botoRegistrar.addEventListener('click', registrarTarja)
+
+function registrarTarja(){
+  botoRegistrar.style.display = "none"
+  textRegistrar.style.display = "none"
+  textRegistrat.style.display = "block"
+}
+
 
   //Obrir tarjeta regal
 
@@ -224,11 +352,15 @@ function dividirPreu(){
   total=total-hol
   preuTotal.className = "preuTotal"
   preuTotal.innerHTML = superTotal + ",00€"
-  preuDescompte.innerHTML = total + ",00€"
+  preuDescompte.className = "preuDescompte"
+  preuDescompte.innerHTML = total + ",00€ " + " <span>10% OFF</span>"
 }
 
 preuTotal.innerHTML = total + ",00€"
 
+items = JSON.parse(localStorage.getItem('items'));
+let itemsTotal = document.getElementById("itemsTotal")
+itemsTotal.innerHTML=items
 
 arrayImatge = JSON.parse(localStorage.getItem('arrayImatge'));
 arrayTitol = JSON.parse(localStorage.getItem('arrayTitol'));
@@ -271,8 +403,3 @@ for (i = 0; i < arrayTitol3.length; i++){
 for (i = 0; i < arrayTitol4.length; i++){
   productes.innerHTML += `<img src=${arrayImatge4[i]}><p>${arrayTitol4[i]} ========== <b>${arrayPreu4[i]}</b></p><br>`
 }
-
-longitud = JSON.parse(localStorage.getItem('longitud'));
-let itemsTotal = document.getElementById("itemsTotal")
-itemsTotal.innerHTML=longitud
-    
